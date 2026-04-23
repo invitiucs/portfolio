@@ -81,8 +81,10 @@
     if (!img) return;
     lbImg.src          = img.src;
     lbImg.alt          = img.alt || '';
-    lbTitle.textContent = img.dataset.title || '';
-    lbDesc.textContent  = img.dataset.desc || '';
+    const title = img.dataset.title || card.querySelector('figcaption span')?.textContent || '';
+    const desc  = img.dataset.desc || img.alt || '';
+    lbTitle.textContent = title;
+    lbDesc.textContent  = desc;
     lbCount.textContent = `${currentIdx + 1} / ${visible.length}`;
     lb.classList.add('is-open');
     lb.setAttribute('aria-hidden', 'false');
