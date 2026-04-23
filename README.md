@@ -1,5 +1,4 @@
-
-Action: file_editor create /app/portfolio/README.md --file-text "# Nishant Raj — Portfolio
+# Nishant Raj — Portfolio
 
 A modern, editorial-style portfolio for **Nishant Raj** — Graphic Designer & CSE Student.
 Built with plain **HTML / CSS / JavaScript** (no frameworks, no build step).
@@ -18,116 +17,45 @@ portfolio/
 ├── images/
 │   ├── project1.jpg
 │   ├── project2.jpg
-│   └── ... project25.jpg
+│   ├── project3.jpg
+│   ├── project4.jpg
+│   ├── project5.jpg
+│   ├── project6.jpg
+│   ├── project7.jpg
+│   ├── project8.jpg
+│   ├── project9.jpg
+│   ├── project10.jpg
+│   ├── project11.jpg
+│   ├── project12.jpg
+│   ├── project13.jpg
+│   ├── project14.jpg
+│   ├── project15.jpg
+│   ├── project16.jpg
+│   ├── project17.jpg
+│   ├── project18.jpg
+│   ├── project19.jpg
+│   └── project20.jpg
 ├── assets/
-│   └── nishant-raj-resume.pdf   ← your real resume goes here
+│   └── nishant-raj-resume.pdf
 └── README.md
 ```
 
 ---
 
-## 🖼 How to add your 25 design images (step‑by‑step)
+## 🖼 How to add your design images
 
 1. Open the `images/` folder.
-2. Rename your first design to **`project1.jpg`**. (You can also use `.png` or `.webp`.)
-3. Do the same for the rest: `project2.jpg`, `project3.jpg`, … up to `project25.jpg`.
-4. Open `index.html` and find the gallery section (it starts with the comment
-   `<!-- PORTFOLIO GALLERY — 25+ images -->`).
-5. Each project uses this pattern:
-
-   ```html
-   <figure class=\"card\" data-cat=\"branding\">
-     <img loading=\"lazy\"
-          src=\"https://images.unsplash.com/...\"
-          alt=\"Brand identity mockup\"
-          data-title=\"Solstice Identity\"
-          data-desc=\"Logo, palette & stationery for a wellness studio.\" />
-     <!-- Replace with your own design: images/project1.jpg -->
-     <figcaption><span>Solstice Identity</span><em>Branding</em></figcaption>
-   </figure>
-   ```
-
-6. To replace a placeholder:
-   - Change `src=\"…unsplash…\"` → **`src=\"images/project1.jpg\"`**
-   - Update `alt=\"…\"` with a short description
-   - Update `data-title=\"…\"` (shown in the lightbox title)
-   - Update `data-desc=\"…\"` (shown in the lightbox description)
-   - Update the `<figcaption>` text (shown on hover)
-   - Keep `data-cat` as one of: `branding` · `posters` · `social` · `ui`
-
-7. To add **more** than 25 images: copy any `<figure>…</figure>` block and paste it inside
-   `<div class=\"gallery\" id=\"gallery\">`. The filter counts update automatically.
+2. Rename your first design to **`project1.jpg`**.
+3. Continue naming your files `project2.jpg`, `project3.jpg`, … up to `project20.jpg`.
+4. Open `index.html` and find the gallery section inside `<div class="gallery" id="gallery">`.
+5. Replace each placeholder `src="..."` with your local path, for example `src="images/project1.jpg"`.
+6. Update each `alt`, `data-title`, `data-desc`, and the `<figcaption>` text to match the design.
 
 ---
 
-## 📄 How to add your Resume PDF
+## 📄 How to add your resume PDF
 
 1. Export your resume as PDF.
 2. Rename it to **`nishant-raj-resume.pdf`**.
 3. Drop it inside the `assets/` folder.
-4. Done — the \"Download Resume (PDF)\" button will serve it automatically.
-
----
-
-## 💻 How to run it locally
-
-**Option A — Just double‑click**
-Open `index.html` in your browser. That's it. Everything works.
-
-**Option B — Local server (recommended, lets lazy‑loading work smoothly)**
-
-If you have Python 3 installed:
-
-```bash
-cd portfolio
-python3 -m http.server 8080
-```
-
-Then open **http://localhost:8080** in your browser.
-
-If you use VS Code, install the **\"Live Server\"** extension → right‑click `index.html` →
-*\"Open with Live Server\"*.
-
----
-
-## 🚀 Deploy with GitHub Pages (free)
-
-1. **Create a GitHub repo** — e.g. `nishant-portfolio`.
-2. **Push this folder** to the repo:
-   ```bash
-   cd portfolio
-   git init
-   git add .
-   git commit -m \"Portfolio v1\"
-   git branch -M main
-   git remote add origin https://github.com/Inviticus03/nishant-portfolio.git
-   git push -u origin main
-   ```
-3. On GitHub, open the repo → **Settings** → **Pages**.
-4. Under **Source**, choose:
-   - **Branch:** `main`
-   - **Folder:** `/ (root)`
-5. Click **Save**. GitHub will give you a live URL like:
-   `https://inviticus03.github.io/nishant-portfolio/`
-6. Wait ~1 minute, then visit it. 🎉
-
-To update the site, just `git push` new changes — GitHub Pages rebuilds automatically.
-
----
-
-## ✏️ Where to edit text content
-
-Inside `index.html`, you'll find comments like:
-
-- `<!-- Replace with your own design: images/project1.jpg -->`
-- Name, email, phone, LinkedIn, GitHub are in the **Contact** and **Footer** sections.
-- Education details are in the **Resume** section.
-
-All CSS colors live at the top of `css/style.css` under `:root { … }` — change `--accent`
-to recolor the whole site.
-
----
-
-Built with care. ✦
-"
-Observation: Create successful: /app/portfolio/README.md
+4. The "Download Resume (PDF)" button will then serve it automatically.
