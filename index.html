@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nishant Raj — Graphic Designer & CSE Student. Branding, posters, social media, and UI design from Punjab, India." />
+  <title>Nishant Raj — Graphic Designer & CSE Student</title>
+
+  <!-- Fonts: editorial serif + clean sans + mono (not Inter/Roboto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" data-testid="site-nav">
+    <a href="#top" class="nav__brand" data-testid="nav-brand">
+      <span class="nav__brand-mark">NR</span>
+      <span class="nav__brand-name">Nishant Raj</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about" data-testid="nav-link-about">About</a>
+      <a href="#work" data-testid="nav-link-work">Work</a>
+      <a href="#resume" data-testid="nav-link-resume">Resume</a>
+      <a href="#contact" data-testid="nav-link-contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav__cta" data-testid="nav-cta">
+      Let's talk <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <button class="nav__burger" aria-label="Open menu" data-testid="nav-burger">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top" class="hero" data-testid="hero-section">
+    <div class="hero__tag">
+      <span class="dot"></span> Available for freelance — Jan 2026
+    </div>
+
+    <h1 class="hero__title">
+      <span class="line">Design that</span>
+      <span class="line"><em>speaks</em> before</span>
+      <span class="line">you read it.</span>
+    </h1>
+
+    <div class="hero__meta">
+      <div>
+        <p class="hero__label">Who</p>
+        <p class="hero__value">Nishant Raj — Graphic Designer &amp; CSE Student</p>
+      </div>
+      <div>
+        <p class="hero__label">Where</p>
+        <p class="hero__value">Punjab, India · Remote available</p>
+      </div>
+      <div>
+        <p class="hero__label">What</p>
+        <p class="hero__value">Branding · Posters · Social · UI</p>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <i class="fa-solid fa-arrow-down"></i>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="about" data-testid="about-section">
+    <p class="section__kicker">01 — About</p>
+    <div class="about__grid">
+      <h2 class="about__lede">
+        I'm a <em>Computer Science</em> student at Chandigarh University with a strong love for <em>graphic design</em> and frontend development.
+      </h2>
+      <div class="about__body">
+        <p>
+          I craft modern, visually engaging work across branding, posters and social media creatives — pairing a designer's eye with a developer's discipline. My goal is simple: design that feels intentional, ships clean, and earns a second look.
+        </p>
+        <ul class="about__stats">
+          <li><strong>50+</strong><span>Projects shipped</span></li>
+          <li><strong>3+</strong><span>Years designing</span></li>
+          <li><strong>2026</strong><span>Graduating</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK / PORTFOLIO GALLERY ============ -->
+  <section id="work" class="work" data-testid="work-section">
+    <div class="work__head">
+      <p class="section__kicker">02 — Selected Work</p>
+      <h2 class="work__title">A small archive of <em>big ideas.</em></h2>
+    </div>
+
+    <!-- FILTER SYSTEM -->
+    <div class="filters" role="tablist" aria-label="Filter projects" data-testid="portfolio-filters">
+      <button class="filter is-active" data-filter="all" data-testid="filter-all">All <sup></sup></button>
+      <button class="filter" data-filter="branding" data-testid="filter-branding">Branding <sup></sup></button>
+      <button class="filter" data-filter="posters" data-testid="filter-posters">Posters <sup></sup></button>
+      <button class="filter" data-filter="social" data-testid="filter-social">Social Media <sup></sup></button>
+      <button class="filter" data-filter="ui" data-testid="filter-ui">UI Design <sup></sup></button>
+    </div>
+
+    <!--
+      PORTFOLIO GALLERY — 25+ images
+      To replace with your own designs:
+      1) Drop your files into /images as project1.jpg ... project25.jpg
+      2) Change each <img src="..."> to src="images/project1.jpg"
+      3) Update data-title, data-cat (branding|posters|social|ui) and data-desc
+    -->
+    <div class="gallery" id="gallery">
+
+  <!-- POSTERS -->
+  <figure class="card" data-cat="posters">
+    <img src="images/project1.jpg" alt="Event Poster Design" />
+    <figcaption><span>Event Poster Design</span><em>Poster</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="posters">
+    <img src="images/project2.jpg" alt="Minimal Typography Design" />
+    <figcaption><span>Minimal Typography</span><em>Poster</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="ui">
+    <img src="images/project3.jpg" alt="UI UX Design" />
+    <figcaption><span>UI/UX Design Concept</span><em>UI Design</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="branding">
+    <img src="images/project4.jpg" alt="Logo Design" />
+    <figcaption><span>Logo Design</span><em>Branding</em></figcaption>
+  </figure>
+
+  <!-- SOCIAL MEDIA -->
+  <figure class="card" data-cat="social">
+    <img src="images/project5.jpg" alt="The Stray Poem" />
+    <figcaption><span>The Stray</span><em>Social Media</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="social">
+    <img src="images/project6.jpg" alt="Among the Stars Poetry" />
+    <figcaption><span>Among the Stars</span><em>Social Media</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="social">
+    <img src="images/project7.jpg" alt="Social Media Design" />
+    <figcaption><span>Social Media Creative</span><em>Social Media</em></figcaption>
+  </figure>
+
+  <!-- EVENT POSTERS -->
+  <figure class="card" data-cat="posters">
+    <img src="images/project8.jpg" alt="Club Event Poster" />
+    <figcaption><span>Club Event Poster</span><em>Poster</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="posters">
+    <img src="images/project9.jpg" alt="Society Event Poster" />
+    <figcaption><span>Society Event Design</span><em>Poster</em></figcaption>
+  </figure>
+
+  <!-- BRANDING -->
+  <figure class="card" data-cat="branding">
+    <img src="images/project10.jpg" alt="Humanoid ID Design" />
+    <figcaption><span>Humanoid ID Concept</span><em>Branding</em></figcaption>
+  </figure>
+
+  <!-- CREATIVE -->
+  <figure class="card" data-cat="creative">
+    <img src="images/project11.jpg" alt="Grain Art Poster" />
+    <figcaption><span>Ancient Grain Art</span><em>Creative</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="creative">
+    <img src="images/project12.jpg" alt="Sunflower Edit" />
+    <figcaption><span>Sunflower Edit</span><em>Creative</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="creative">
+    <img src="images/project13.jpg" alt="Death Inspiration" />
+    <figcaption><span>Death Inspiration</span><em>Creative</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="creative">
+    <img src="images/project14.jpg" alt="Ascendancy Art" />
+    <figcaption><span>Ascendancy</span><em>Creative</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="posters">
+    <img src="images/project15.jpg" alt="Labyrinth Poster" />
+    <figcaption><span>Labyrinth Quote Poster</span><em>Poster</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="creative">
+    <img src="images/project16.jpg" alt="Resilience Art" />
+    <figcaption><span>Resilience</span><em>Creative</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="creative">
+    <img src="images/project17.jpg" alt="Sisyphus Word Art" />
+    <figcaption><span>Myth of Sisyphus</span><em>Creative</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="creative">
+    <img src="images/project18.jpg" alt="Solitude Cover" />
+    <figcaption><span>Solitude</span><em>Creative</em></figcaption>
+  </figure>
+
+  <!-- ANIME POSTERS -->
+  <figure class="card" data-cat="posters">
+    <img src="images/project19.jpg" alt="Vinland Poster" />
+    <figcaption><span>Vinland Saga</span><em>Poster</em></figcaption>
+  </figure>
+
+  <figure class="card" data-cat="posters">
+    <img src="images/project20.jpg" alt="Berserk Poster" />
+    <figcaption><span>Berserk Brutalism</span><em>Poster</em></figcaption>
+  </figure>
+
+</div>
+  <!-- ============ RESUME ============ -->
+  <section id="resume" class="resume" data-testid="resume-section">
+    <p class="section__kicker">03 — Resume</p>
+    <div class="resume__head">
+      <h2 class="resume__title">A working <em>snapshot</em> of me.</h2>
+      <!-- Replace /assets/nishant-raj-resume.pdf with your actual PDF file -->
+      <a class="resume__download" href="assets/nishant-raj-resume.pdf" download data-testid="resume-download-btn">
+        <i class="fa-solid fa-arrow-down-to-line"></i> Download Resume (PDF)
+      </a>
+    </div>
+
+    <div class="resume__grid">
+      <!-- EDUCATION -->
+      <div class="resume__col">
+        <h3 class="resume__heading"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+        <div class="resume__item">
+          <div class="resume__bar"></div>
+          <div>
+            <p class="resume__date">2022 — 2026</p>
+            <p class="resume__role">B.E. Computer Science &amp; Engineering</p>
+            <p class="resume__org">Chandigarh University, Punjab</p>
+            <p class="resume__desc">Coursework in data structures, web development, and UI/UX fundamentals — paired with a self-taught design practice.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="resume__col">
+        <h3 class="resume__heading"><i class="fa-solid fa-toolbox"></i> Skills &amp; Tools</h3>
+
+        <p class="resume__subheading">Design Software</p>
+        <ul class="chips" data-testid="skills-software">
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>CorelDRAW</li>
+          <li>Figma</li>
+          <li>Canva</li>
+        </ul>
+
+        <p class="resume__subheading">Disciplines</p>
+        <ul class="chips chips--outline" data-testid="skills-disciplines">
+          <li>UI / UX Design</li>
+          <li>Branding &amp; Identity</li>
+          <li>Poster Design</li>
+          <li>Social Media Creatives</li>
+          <li>Typography</li>
+        </ul>
+
+        <p class="resume__subheading">Also comfortable with</p>
+        <ul class="chips chips--ghost" data-testid="skills-other">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Git &amp; GitHub</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact" data-testid="contact-section">
+    <p class="section__kicker">04 — Contact</p>
+    <h2 class="contact__title">
+      Have a brief? <br /><em>Let's make it memorable.</em>
+    </h2>
+
+    <div class="contact__grid">
+      <a href="mailto:rajnishant1299@gmail.com" class="contact__card" data-testid="contact-email">
+        <span class="contact__label">Email</span>
+        <span class="contact__value">rajnishant1299@gmail.com</span>
+        <i class="fa-solid fa-arrow-up-right"></i>
+      </a>
+      <a href="tel:+916299974726" class="contact__card" data-testid="contact-phone">
+        <span class="contact__label">Phone</span>
+        <span class="contact__value">+91 6299 974 726</span>
+        <i class="fa-solid fa-arrow-up-right"></i>
+      </a>
+      <a href="https://linkedin.com/in/nishantnandan12" target="_blank" rel="noopener" class="contact__card" data-testid="contact-linkedin">
+        <span class="contact__label">LinkedIn</span>
+        <span class="contact__value">/in/nishantnandan12</span>
+        <i class="fa-solid fa-arrow-up-right"></i>
+      </a>
+      <a href="https://github.com/invitiucs" target="_blank" rel="noopener" class="contact__card" data-testid="contact-github">
+        <span class="contact__label">GitHub</span>
+        <span class="contact__value">@invitiucs</span>
+        <i class="fa-solid fa-arrow-up-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" data-testid="site-footer">
+    <div class="footer__left">
+      <p class="footer__name">Nishant Raj</p>
+      <p class="footer__meta">Graphic Designer · Punjab, India · <span id="year"></span></p>
+    </div>
+    <div class="footer__right">
+      <a href="https://linkedin.com/in/nishantnandan12" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/invitiucs" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:rajnishant1299@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="#top" class="footer__top" data-testid="footer-back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" data-testid="lightbox">
+    <button class="lightbox__close" aria-label="Close" data-testid="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous" data-testid="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Next" data-testid="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+    <figure class="lightbox__content">
+      <img id="lightbox-img" src="" alt="" />
+      <figcaption>
+        <p id="lightbox-title"></p>
+        <p id="lightbox-desc"></p>
+        <p id="lightbox-counter" class="lightbox__counter"></p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
